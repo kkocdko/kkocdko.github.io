@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head><meta content="width=device-width" name=viewport><link href=/bundle.css rel=stylesheet><script src=/bundle.js defer></script><script src=/check.js async></script><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><title>爱奇艺万能播放器调教指南 - kkocdko's blog</title><meta content="防自动更新、关闭启动动画、防止下载主题" name=description><meta content=rgb(63,81,181) name=theme-color></head><body><main><article class=card><h1 id=爱奇艺万能播放器调教指南>爱奇艺万能播放器调教指南</h1><blockquote><p>当然，你得先装着这个播放器。</p></blockquote><blockquote><p>最后一次测试成功时间为20180805。失效不补。</p></blockquote><p>首先，用资源管理器打开<code>%UserProfile%/AppData/Roaming/IQIYI Video/GeePlayer</code>。</p><h3 id=防自动更新>防自动更新</h3><ul><li>先在<code>设置\常规</code>中取消勾选<code>发现新版本时提示</code>。如果不取消勾选，会出现“弹出提示，但是更新不了”的尴尬情况。</li></ul><p>删除以下内容（若不存在则忽略）：</p><pre><code>GpUpdate_old.exe(File)
+GpUpdate.exe(File)
+GpUpdate.ini(File)
+GpUpdate(Folder)</code></pre><p>然后新建以下名称的空文件，并赋予只读属性：</p><pre><code>GpUpdate.exe
+GpUpdate.ini
+GpUpdate</code></pre><h3 id=关闭启动动画>关闭启动动画</h3><ul><li>即启动时爱奇艺的logo光线掠过的动画。</li></ul><p>删除<code>FlashLogo</code>文件夹，新建同名空文件，赋予只读属性。（顺便说一句，按照这个文件夹里边的命名规律弄一组图片，就能自定义启动动画）</p><h3 id=防止下载主题>防止下载主题</h3><p>删除<code>SkinPeeler</code>文件夹，新建同名空文件，赋予只读属性。</p><h3 id=批处理>批处理</h3><p>复制以下内容到文本文件，改文件后缀名为<code>bat</code>，双击运行，即可完成上述所有操作：</p><pre><code class=language-batch>md &quot;%appdata%\IQIYI Video\GeePlayer&quot;
+cd /d &quot;%appdata%\IQIYI Video\GeePlayer&quot;
+
+if exist geeplayercfg.ini (
+    goto ReplaceKey
+) else (
+    echo [commonsetting] &gt;&gt;geeplayercfg.ini
+    echo promptupdate=0 &gt;&gt;geeplayercfg.ini
+    goto MainStep
+)
+
+:ReplaceKey
+echo Set fso=CreateObject(&quot;scripting.filesystemobject&quot;) &gt;Replace.vbs
+echo Set file=fso.opentextfile(&quot;geeplayercfg.ini&quot;) &gt;&gt;Replace.vbs
+echo fso.deletefile(WScript.scriptfullname) &gt;&gt;Replace.vbs
+echo s=file.readall &gt;&gt;Replace.vbs
+echo file.close &gt;&gt;Replace.vbs
+echo s=Replace(s,&quot;promptupdate=1&quot;,&quot;promptupdate=0&quot;) &gt;&gt;Replace.vbs
+echo Set file=fso.createtextfile(&quot;geeplayercfg.ini&quot;) &gt;&gt;Replace.vbs
+echo file.write s &gt;&gt;Replace.vbs
+echo file.close &gt;&gt;Replace.vbs
+start &quot;&quot; Replace.vbs
+
+:MainStep
+
+::Disabled Update
+del /f /s /q GpUpdate_old.exe
+del /f /s /q GpUpdate.exe
+cd . &gt;GpUpdate.exe
+attrib +r GpUpdate.exe
+del /f /s /q GpUpdate.ini
+cd . &gt;GpUpdate.ini
+attrib +r GpUpdate
+rd /s /q GpUpdate
+cd . &gt;GpUpdate
+attrib +r GpUpdate.ini
+
+::Disabled Animation
+rd /s /q FlashLogo
+cd . &gt;FlashLogo
+attrib +r FlashLogo
+
+::Disabled Skins Downloader
+rd /s /q SkinPeeler
+cd . &gt;SkinPeeler
+attrib +r SkinPeeler</code></pre></article></main><header class=in id=extra></header></body></html>

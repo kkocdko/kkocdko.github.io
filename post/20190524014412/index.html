@@ -1,0 +1,7 @@
+<!DOCTYPE html><html><head><meta content="width=device-width" name=viewport><link href=/bundle.css rel=stylesheet><script src=/bundle.js defer></script><script src=/check.js async></script><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><title>灵活的绿色(便携)软件启动器 - kkocdko's blog</title><meta content="只是个壳而已" name=description><meta content=rgb(63,81,181) name=theme-color></head><body><main><article class=card><h1 id=灵活的绿色便携软件启动器>灵活的绿色(便携)软件启动器</h1><blockquote><p>受到<a href=https://portableapps.com>portableapps.com</a>的启发。</p></blockquote><h3 id=introduction>Introduction</h3><ul><li><p>这启动器只是个壳，主要操作由批处理进行。因此它更加灵活，便于修改，<strong>不易被杀软误报</strong>。</p></li><li><p>运行启动器，将静默执行<code>/Misc/Launcher.bat</code>批处理并转发参数（支持Unicode）。</p></li><li><p>可使用<a href=http://www.angusj.com/resourcehacker>ResourceHacker</a>添加图标，清单，版权信息等。</p></li><li><p>使用这样的目录结构：</p></li></ul><pre><code>DemoApp
+├─App
+│  └─DemoApp.exe
+├─Data
+├─Misc
+│ └─Launcher.bat
+└─Launcher.exe</code></pre><h3 id=matters-need-attention>Matters Need Attention</h3><ul><li><p>在<code>Launcher.bat</code>批处理中，应避免切换目录或使用相对路径，因为某些程序会根据<code>Current Directory</code>进行操作，使用<code>cd</code>命令将造成不必要的麻烦。通过将<code>%~dp0</code>储存到变量，可以很好地实现类似相对路径效果而不必担心副作用。</p></li><li><p>某些程序将路径写死，无法通过改变环境变量来重定向文件写入。</p></li></ul><h3 id=qa>Q&amp;A</h3><h3 id=download>Download</h3><p><a href=https://pan.baidu.com/s/1RzO3kAwaTkeVTFAs3Ndaeg>https://pan.baidu.com/s/1RzO3kAwaTkeVTFAs3Ndaeg</a></p></article></main><header class=in id=extra></header></body></html>
