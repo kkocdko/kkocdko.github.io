@@ -1,1 +1,1 @@
-try{eval("async a=>a")}catch(a){window.stop&&stop(),location="//browser-update.org/update.html"}
+(document=>{try{eval("async a=>a")}catch(t){window.stop&&stop(),location="//browser-update.org/update.html"}})(document)
