@@ -4,35 +4,29 @@ const cacheName = "randnum";
 const filesList = [
   {
     url: "./",
-    updateDate: 1585193258101,
+    updateDate: 1588525108016,
   },
   {
-    url: "/toy/misc/matter.min.css",
-    updateDate: 1585193258101,
+    url:
+      "//cdn.jsdelivr.net/npm/material-components-web@6.0.0/dist/material-components-web.min.css",
+    updateDate: 1588525108016,
   },
   {
-    url: "/toy/misc/matter-plus.css",
-    updateDate: 1585193258101,
+    url: "../misc/material-components-web-kmod.css",
+    updateDate: 1588525108016,
   },
   {
-    url: "style.css",
-    updateDate: 1585193258101,
-  },
-  {
-    url: "script.js",
-    updateDate: 1585193258101,
-  },
-  {
-    url: "favicon.svg",
-    updateDate: 1585193258101,
-  },
-  {
-    url: "favicon.png",
-    updateDate: 1585193258101,
+    url:
+      "//cdn.jsdelivr.net/npm/material-components-web@6.0.0/dist/material-components-web.min.js",
+    updateDate: 1588525108016,
   },
   {
     url: "manifest.json",
-    updateDate: 1585193258101,
+    updateDate: 1588525108016,
+  },
+  {
+    url: "favicon.svg",
+    updateDate: 1588525108016,
   },
 ];
 

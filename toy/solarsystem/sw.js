@@ -4,27 +4,15 @@ const cacheName = "solarsystem";
 const filesList = [
   {
     url: "./",
-    updateDate: 1585193258101,
-  },
-  {
-    url: "style.css",
-    updateDate: 1585193258101,
-  },
-  {
-    url: "script.js",
-    updateDate: 1585193258101,
-  },
-  {
-    url: "favicon.svg",
-    updateDate: 1585193258101,
-  },
-  {
-    url: "favicon.png",
-    updateDate: 1585193258101,
+    updateDate: 1588525108016,
   },
   {
     url: "manifest.json",
-    updateDate: 1585193258101,
+    updateDate: 1588525108016,
+  },
+  {
+    url: "favicon.svg",
+    updateDate: 1588525108016,
   },
 ];
 

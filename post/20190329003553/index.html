@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta content="width=device-width,initial-scale=1,user-scalable=no" name=viewport><link href=/bundle.css rel=stylesheet><script src=/bundle.js defer></script><script src=/check.js async></script><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><title>注册表修改文件关联(默认程序) - kkocdko's blog</title><meta content="在NT6+上通用" name=description><meta content=rgb(63,81,181) name=theme-color></head><body><main><article class=card><h1 id=注册表修改文件关联默认程序>注册表修改文件关联(默认程序)</h1><h3 id=introduction>Introduction</h3><p>由于各种原因（主要是安全方面考虑），Windows中修改文件关联的Api一改再改，改了又改。</p><p>而直接修改注册表+刷新Explorer的方法，也许是比较方便的能兼容各个Windows版本（NT6+）的方案（也许需要管理员权限）。</p><h3 id=code>Code</h3><pre><code>[-HKEY_CURRENT_USER\Software\Classes\{{AppName}}.{{Extension}}]
+<!DOCTYPE html><meta content="width=device-width" name=viewport><link href=/bundle.css rel=stylesheet><script src=/bundle.js defer></script><script src=/check.js async></script><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><title>注册表修改文件关联(默认程序) - kkocdko's blog</title><meta content="在NT6+上通用" name=description><main><article class=card><h1 id=注册表修改文件关联默认程序>注册表修改文件关联(默认程序)</h1><h3 id=introduction>Introduction</h3><p>由于各种原因（主要是安全方面考虑），Windows中修改文件关联的Api一改再改，改了又改。</p><p>而直接修改注册表+刷新Explorer的方法，也许是比较方便的能兼容各个Windows版本（NT6+）的方案（也许需要管理员权限）。</p><h3 id=code>Code</h3><pre><code>[-HKEY_CURRENT_USER\Software\Classes\{{AppName}}.{{Extension}}]
 
 [HKEY_CURRENT_USER\Software\Classes\{{AppName}}.{{Extension}}]
 
@@ -42,4 +42,4 @@ function generateReg(appPath, appName, extension, iconFile, iconIndex) {
     outputStr = outputStr.replace(/{{IconFile}}/g, iconFile);
     outputStr = outputStr.replace(/{{IconIndex}}/g, iconIndex);
     return outputStr;
-}</code></pre></article></main><header class=in id=extra></header></body></html>
+}</code></pre></article></main><header class=in id=extra></header>

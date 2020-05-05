@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta content="width=device-width,initial-scale=1,user-scalable=no" name=viewport><link href=/bundle.css rel=stylesheet><script src=/bundle.js defer></script><script src=/check.js async></script><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><title>用批处理弄个U盘复制器 - kkocdko's blog</title><meta content="使用Win下的Robocopy" name=description><meta content=rgb(63,81,181) name=theme-color></head><body><main><article class=card><h1 id=用批处理弄个u盘复制器>用批处理弄个U盘复制器</h1><h3 id=不得用于非法用途>不得用于非法用途</h3><pre><code class=language-batch>fltmc&gt;nul||mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~dpnx0&quot;,&quot;%*&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit
+<!DOCTYPE html><meta content="width=device-width" name=viewport><link href=/bundle.css rel=stylesheet><script src=/bundle.js defer></script><script src=/check.js async></script><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><title>用批处理弄个U盘复制器 - kkocdko's blog</title><meta content="使用Win下的Robocopy" name=description><main><article class=card><h1 id=用批处理弄个u盘复制器>用批处理弄个U盘复制器</h1><h3 id=不得用于非法用途>不得用于非法用途</h3><pre><code class=language-batch>fltmc&gt;nul||mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~dpnx0&quot;,&quot;%*&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit
 
 set &quot;Destination=D:\k\CopiedFiles\&quot;
 set &quot;Extension=*&quot;
@@ -30,4 +30,4 @@ call :Copier
 set &quot;Source=J:\&quot;
 call :Copier
 
-goto Main</code></pre></article></main><header class=in id=extra></header></body></html>
+goto Main</code></pre></article></main><header class=in id=extra></header>

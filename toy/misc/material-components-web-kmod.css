@@ -18,29 +18,17 @@ html {
 
 body {
   display: grid;
+  gap: 20px;
   width: 100vw;
-  max-width: 350px;
-  padding: 15px;
+  height: 100vh;
+  padding: 20px;
 }
 
-#main-card {
-  display: grid;
-  gap: 15px;
+.mdc-card {
+  padding: 20px;
+  overflow: hidden;
 }
 
-#input-file {
-  display: none;
-}
-
-#output-box {
-  padding-right: 5em;
-}
-
-#copy-btn {
-  position: absolute;
-  right: 0;
-  width: 5em;
-  height: 56px;
-  border-width: 0 0 0 1px;
-  border-radius: 0;
+.mdc-card__action-buttons {
+  justify-content: flex-end;
 }
