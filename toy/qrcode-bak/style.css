@@ -1,0 +1,15 @@
+body {
+  max-width: 350px;
+  height: auto;
+}
+
+#main-panel {
+  display: grid;
+  gap: 20px;
+}
+
+#main-panel > .mdc-card__action-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}

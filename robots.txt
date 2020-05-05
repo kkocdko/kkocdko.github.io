@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kkocdko.github.io/sitemap.xml

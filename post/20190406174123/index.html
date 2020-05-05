@@ -1,0 +1,13 @@
+<!DOCTYPE html><meta content="width=device-width" name=viewport><link href=/bundle.css rel=stylesheet><script src=/bundle.js defer></script><script src=/check.js async></script><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><title>用UserJS注入UserCSS - kkocdko's blog</title><meta content="避免安装太多拓展" name=description><main><article class=card><h1 id=用userjs注入usercss>用UserJS注入UserCSS</h1><h3 id=introduction>Introduction</h3><p>加载UserCSS需要<a href=https://userstyles.org>Stylish</a>这样的拓展，但是我通常希望避免安装太多拓展，特别是在内存不宽裕的情况下。</p><p>使用UserJS注入CSS是个不错的选择。只需装一个脚本管理器，就能使用UserJS+UserCSS，一个顶俩。</p><p>这里给出一个简洁的模板：</p><pre><code class=language-javascript>// ==UserScript==
+// @name         InsertUserCSS
+// @include      *://example.com/*
+// ==/UserScript==
+&#39;use strict&#39;
+
+document.body.insertAdjacentHTML(&#39;beforeend&#39;, `&lt;style&gt;
+
+body {
+  background: #000;
+}
+
+&lt;/style&gt;`)</code></pre><p>示例：<a href=https://greasyfork.org/scripts/371302>https://greasyfork.org/scripts/371302</a></p></article></main><header class=in id=extra></header>
