@@ -1,1 +1,0 @@
-window.history&&history.scrollRestoration||(window.stop&&stop(),location="//browser-update.org/update.html")

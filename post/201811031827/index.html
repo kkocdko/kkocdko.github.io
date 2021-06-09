@@ -1,4 +1,4 @@
-<!DOCTYPE html><meta content="width=device-width" name=viewport><meta content="修复图标显示异常的问题" name=description><link href=/bundle.css rel=stylesheet><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><script src=/bundle.js defer></script><script src=/check.js async></script><title>重置Windows图标缓存 - kkocdko's blog</title><main><article class=card><h1 id=重置windows图标缓存>重置Windows图标缓存</h1><h3 id=code>Code</h3><pre><code class=language-batch>fltmc&gt;nul||cd/d %~dp0&amp;&amp;mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~nx0&quot;,&quot;%1&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit
+<!DOCTYPE html><title>重置 Windows 图标缓存 - kkocdko's blog</title><meta name="description" content="修复图标显示异常的问题"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script><main><article><h1>重置 Windows 图标缓存</h1><pre><code class="language-batch">fltmc&gt;nul||cd/d %~dp0&amp;&amp;mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~nx0&quot;,&quot;%1&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit
 taskkill /f /im explorer.exe
 rd /s /q %userprofile%\AppData\Local\Microsoft\Windows\Explorer
-start &quot;&quot; explorer.exe</code></pre></article></main><header class=in></header>
+start &quot;&quot; explorer.exe</code></pre></article></main>

@@ -1,8 +1,0 @@
-<!DOCTYPE html><meta content="width=device-width" name=viewport><meta content="使用更激进的Deflate压缩" name=description><link href=/bundle.css rel=stylesheet><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><script src=/bundle.js defer></script><script src=/check.js async></script><title>进一步减小Office文件体积 - kkocdko's blog</title><main><article class=card><h1 id=进一步减小office文件体积>进一步减小Office文件体积</h1><blockquote><p>仅适用于OfficeXml文件（例如xlsx）</p></blockquote><h3 id=packed-tool>Packed Tool</h3><p><a href=https://pan.baidu.com/s/1B-ENOXZu7Ud-4fatPPcWrQ>https://pan.baidu.com/s/1B-ENOXZu7Ud-4fatPPcWrQ</a></p><ul><li><p>拖拽要压缩的文件到程序上松手即可。</p></li><li><p>为了减小体积，<strong>删除了7-Zip的版本信息，图标等，侵删</strong></p></li></ul><pre><code class=language-powershell>cd /d %~dp0
-7z x -oSourceFiles %1
-cd /d SourceFiles
-if &quot;%2&quot;==&quot;&quot; (
-    ..\7z a -mx9 -tzip &quot;%~dp1%~n1_Compressed%~x1&quot;
-) else (
-    ..\7z a -mx9 -tzip %2
-)</code></pre><h3 id=principle>Principle</h3><p>MSOffice创建的Office文件采用的<code>Deflate</code>压缩配置是<code>Fastest</code>，为保存速度优化。我们可以把文件解压出来，再重新以<code>Ultra</code>配置压缩，就能得到比原来的文件好一点儿的压缩率。</p><ul><li>不要使用<code>Deflate64</code>。</li></ul><h3 id=contrast>Contrast</h3><table><thead><tr><th>文件名</th><th>大小</th></tr></thead><tbody><tr><td>质量分析表-原文件.xltx</td><td>22,753 bit(22.2 KB)</td></tr><tr><td>质量分析表-重压缩.xltx</td><td>17,800 bit(17.3 KB)</td></tr></tbody></table><ul><li>仅在目标文件内文字较多时会取得较好的效果。对于图片较多的文件，效果不明显。</li></ul></article></main><header class=in></header>

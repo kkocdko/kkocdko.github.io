@@ -1,0 +1,49 @@
+<!DOCTYPE html><title>Backup Data from VSCode Web - kkocdko's blog</title><meta name="description" content="Export / import the user data"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script><main><article><h1>Backup Data from VSCode Web</h1><h3 id="intro">Intro</h3><p>The VSCode Web (like VSCode Remote, GitHub Codespaces) saves user data in <a href="https://developer.mozilla.org/docs/Web/API/IndexedDB_API">IndexedDB</a> which will be lost if you clear the browser&#39;s storage.</p><p>This code snippet enable you to export and import the user data.</p><p>Run on DevTools. To switch between export / import, please modify the code at the end.</p><h3 id="code">Code</h3><pre><code class="language-javascript">const transact = async () =&gt; {
+  const req = indexedDB.open(&quot;vscode-web-db&quot;);
+  await new Promise((r) =&gt; (req.onsuccess = r));
+  const storeName = &quot;vscode-userdata-store&quot;;
+  const transaction = req.result.transaction(storeName, &quot;readwrite&quot;);
+  const oncomplete = new Promise((r) =&gt; (transaction.oncomplete = r));
+  return { store: transaction.objectStore(storeName), oncomplete };
+};
+const exportData = async () =&gt; {
+  const list /* You can add entries here */ = [
+    &quot;/User/settings.json&quot;,
+    &quot;/User/keybindings.json&quot;,
+    &quot;/User/state/global.json&quot;,
+    &quot;/User/workspaceStorage/&quot;,
+  ];
+  const allKeysReq = (await transact()).store.getAllKeys();
+  await new Promise((r) =&gt; (allKeysReq.onsuccess = r));
+  const match = (key) =&gt; list.find((i) =&gt; key.startsWith(i));
+  const keys = allKeysReq.result.filter(match);
+  const { store, oncomplete } = await transact();
+  const reqs = keys.map((key) =&gt; store.get(key));
+  await oncomplete;
+  const decoder = new TextDecoder();
+  const group = {};
+  keys.forEach((k, i) =&gt; (group[k] = btoa(decoder.decode(reqs[i].result))));
+  const link = document.createElement(&quot;a&quot;);
+  link.download = &quot;vscode-web-backup_&quot; + Date.now() + &quot;.json&quot;;
+  link.href = &quot;data:text/json,&quot; + encodeURIComponent(JSON.stringify(group));
+  link.click();
+};
+const importData = async () =&gt; {
+  const fileInput = document.createElement(&quot;input&quot;);
+  fileInput.type = &quot;file&quot;;
+  fileInput.click();
+  await new Promise((r) =&gt; (fileInput.onchange = r));
+  const fileReader = new FileReader();
+  fileReader.readAsText(fileInput.files[0]);
+  await new Promise((r) =&gt; (fileReader.onload = r));
+  const group = JSON.parse(fileReader.result);
+  const encoder = new TextEncoder();
+  const b2u = (s) =&gt; encoder.encode(atob(s));
+  const { store, oncomplete } = await transact();
+  store.clear();
+  for (const key in group) store.put(b2u(group[key]), key);
+  await oncomplete;
+  location.reload();
+};
+exportData();
+// importData();</code></pre><ul><li>You can wrap the code in <code>(()=&gt;{ /* CODE */ })()</code> to avoid name pollution.</li></ul></article></main>

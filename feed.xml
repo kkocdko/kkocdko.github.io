@@ -1,1 +1,267 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>kkocdko's blog</title><link>https://kkocdko.github.io</link><description>kkocdko's blog</description><item><title>博客停更至2021高考结束</title><link>https://kkocdko.github.io/post/202008070207/</link><description>“为了更伟大的利益”</description></item><item><title>优雅地游玩Minecraft</title><link>https://kkocdko.github.io/post/202008020004/</link><description>提升性能+便携化</description></item><item><title>对博客进行更新</title><link>https://kkocdko.github.io/post/202007292318/</link><description>暑假嘛，虽然时间不长</description></item><item><title>让程序以管理员权限运行的PE清单</title><link>https://kkocdko.github.io/post/202007200442/</link><description>备忘</description></item><item><title>注销ZEIT账号之后遇到的坑</title><link>https://kkocdko.github.io/post/202004071057/</link><description>注销前需手动删除项目，否则域名将被永久占用</description></item><item><title>本博客的协议已更改为CC0</title><link>https://kkocdko.github.io/post/202003261111/</link><description>管那么多干啥</description></item><item><title>使MicrosoftOffice后台常驻</title><link>https://kkocdko.github.io/post/202003020900/</link><description>加快启动速度</description></item><item><title>在安装VS生成工具时规避.NET安装错误</title><link>https://kkocdko.github.io/post/202002251309/</link><description>提示“未能安装包Microsoft.Net.4.7.2.FullRedist...”</description></item><item><title>占位用的空白媒体文件</title><link>https://kkocdko.github.io/post/202001252150/</link><description>偶尔急用却找不到，太糟心了</description></item><item><title>gitvars.bat for Github Desktop</title><link>https://kkocdko.github.io/post/201912292154/</link><description>Import Github Desktop's build-in Git client</description></item><item><title>推荐一个开源的地图项目</title><link>https://kkocdko.github.io/post/201912282244/</link><description>Open Street Map</description></item><item><title>优雅地游玩Flash游戏</title><link>https://kkocdko.github.io/post/201912010248/</link><description>免网页广告，加载迅速，低资源占用</description></item><item><title>WPS2016精简便携版</title><link>https://kkocdko.github.io/post/201910051129/</link><description>适合丢进U盘备用</description></item><item><title>优雅地使用WPS2019的方法</title><link>https://kkocdko.github.io/post/201910022343/</link><description>去除几乎所有广告和增值服务</description></item><item><title>Convert Const to Let by Terser</title><link>https://kkocdko.github.io/post/201908110550/</link><description>Using TreeTransformer</description></item><item><title>对于修改迅雷9的经验之谈</title><link>https://kkocdko.github.io/post/201907300208/</link><description>一些关于迅雷9修改的笔记</description></item><item><title>迅雷极简融合版</title><link>https://kkocdko.github.io/post/201907240022/</link><description>迅雷9界面+迅雷X内核，仅5.8MB</description></item><item><title>规避VisualStudio许可证过期的Bug</title><link>https://kkocdko.github.io/post/201907081121/</link><description>许可证过期后，更新许可证会出错。</description></item><item><title>方便地使用iPod</title><link>https://kkocdko.github.io/post/201905030002/</link><description>尽量脱离Apple生态链</description></item><item><title>网页防复制措施及应对方法</title><link>https://kkocdko.github.io/post/201905022234/</link><description>请勿用于侵权行为</description></item><item><title>用UserJS注入UserCSS</title><link>https://kkocdko.github.io/post/201904061741/</link><description>避免安装太多拓展</description></item><item><title>注册表修改文件关联(默认程序)</title><link>https://kkocdko.github.io/post/201903290035/</link><description>在NT6+上通用</description></item><item><title>最大限度压缩文档扫描件</title><link>https://kkocdko.github.io/post/201902262339/</link><description>也适用于其他颜色单调的图片</description></item><item><title>周期精准的太阳系模型</title><link>https://kkocdko.github.io/post/201901292001/</link><description>自制</description></item><item><title>获取Bilibili直播流</title><link>https://kkocdko.github.io/post/201901222350/</link><description>可用于直播录制等</description></item><item><title>关闭屏幕的WinAPI</title><link>https://kkocdko.github.io/post/201901160028/</link><description>随手记一下。用于笔记本/一体机关屏</description></item><item><title>新年新主题</title><link>https://kkocdko.github.io/post/201901010010/</link><description>呕吼！</description></item><item><title>随手整个NodeJS文件服务器</title><link>https://kkocdko.github.io/post/201812151344/</link><description>局域网里边传文件用，方便</description></item><item><title>QRCodeJS的修改版</title><link>https://kkocdko.github.io/post/201811260038/</link><description>自定义掩膜种类，输出ASCII或SVG</description></item><item><title>重置Windows图标缓存</title><link>https://kkocdko.github.io/post/201811031827/</link><description>修复图标显示异常的问题</description></item><item><title>PotPlayer图标包：爱奇艺播放器</title><link>https://kkocdko.github.io/post/201811031425/</link><description>自制</description></item><item><title>AIDA64极限精简单文件版</title><link>https://kkocdko.github.io/post/201810031930/</link><description>蛮有用的硬件检测工具，仅2.6MB</description></item><item><title>AquaSnap单文件精简版</title><link>https://kkocdko.github.io/post/201810020020/</link><description>为WinXP添加NT6+的窗口手势</description></item><item><title>几何画板单文件精简版</title><link>https://kkocdko.github.io/post/201810011506/</link><description>低调使用</description></item><item><title>TheWorld浏览器单文件版</title><link>https://kkocdko.github.io/post/201809222137/</link><description>自制</description></item><item><title>LibWebP命令行帮助的中文翻译</title><link>https://kkocdko.github.io/post/201809191300/</link><description>自翻</description></item><item><title>挂起极域电子教室客户端</title><link>https://kkocdko.github.io/post/201809071159/</link><description>也许我们可以温和一点儿</description></item><item><title>美化惠安一中官网的UserJS</title><link>https://kkocdko.github.io/post/201808252144/</link><description>使福建惠安一中官网更加现代化</description></item><item><title>在MBR+Legacy下用Bootmgr引导Ubuntu</title><link>https://kkocdko.github.io/post/201808111117/</link><description>标题已经说得够清楚了</description></item><item><title>简洁的Markdown编辑器页面</title><link>https://kkocdko.github.io/post/201807312330/</link><description>解析器为marked.js</description></item><item><title>精致的魔方页面</title><link>https://kkocdko.github.io/post/201807302300/</link><description>来自GoogleDoodle</description></item><item><title>通用GUI外壳-UniversalGUI</title><link>https://kkocdko.github.io/post/201807260100/</link><description>我的第一个像样的项目</description></item><item><title>修复MSOffice墨迹不可用问题</title><link>https://kkocdko.github.io/post/201807101054/</link><description>例如PPT放映白板，Word墨迹公式</description></item><item><title>关于Selnium的一些笔记</title><link>https://kkocdko.github.io/post/201807051332/</link><description>推荐教程、经验，以及遇到的一些坑</description></item><item><title>使用VBA批量转换Office文档格式</title><link>https://kkocdko.github.io/post/201806261915/</link><description>例如，转换doc到docx</description></item><item><title>进一步减小Office文件体积</title><link>https://kkocdko.github.io/post/201806250708/</link><description>使用更激进的Deflate压缩</description></item><item><title>不便携的有道词典便携版</title><link>https://kkocdko.github.io/post/201806061949/</link><description>包含常用离线词典，去除非会员下载限制</description></item><item><title>我目前的ChromeDino记录</title><link>https://kkocdko.github.io/post/201805142248/</link><description>再次刷新</description></item><item><title>关于清华同方还原卡的一个坑</title><link>https://kkocdko.github.io/post/201805111951/</link><description>注册表的更改不会被还原，且不会储存到“进度”</description></item><item><title>Chrome离线小恐龙页面</title><link>https://kkocdko.github.io/post/201805091954/</link><description>未连接到互联网</description></item><item><title>各品牌主板的便携启动快捷键</title><link>https://kkocdko.github.io/post/201804260009/</link><description>随手记一下，来自WEPE的帮助文档</description></item><item><title>爱奇艺万能播放器调教指南</title><link>https://kkocdko.github.io/post/201804202136/</link><description>防自动更新、关闭启动动画、防止下载主题</description></item><item><title>也许是最简洁的搜狗输入法皮肤</title><link>https://kkocdko.github.io/post/201804161401/</link><description>自绘，真正的极简</description></item><item><title>使用小丸工具箱压制单声道MP3</title><link>https://kkocdko.github.io/post/201804142138/</link><description>将多声道压制为单声道，使用 -m m 的参数</description></item><item><title>用批处理弄个U盘复制器</title><link>https://kkocdko.github.io/post/201804130139/</link><description>使用Win下的Robocopy</description></item><item><title>美化版TRIXX</title><link>https://kkocdko.github.io/post/201804110022/</link><description>AMD显卡软超工具</description></item><item><title>Windows默认蓝色代码</title><link>https://kkocdko.github.io/post/201804110012/</link><description>随手记一下</description></item><item><title>考试成绩质量分析表模板</title><link>https://kkocdko.github.io/post/201804060428/</link><description>自绘 质量分析表</description></item><item><title>A4大小的普通英文稿纸</title><link>https://kkocdko.github.io/post/201804011233/</link><description>自绘 英文稿纸</description></item><item><title>在批处理中延时(等待)</title><link>https://kkocdko.github.io/post/201804010109/</link><description>一小段代码</description></item><item><title>让批处理隐藏窗口运行</title><link>https://kkocdko.github.io/post/201804010105/</link><description>一小段代码</description></item><item><title>让批处理以管理员权限运行</title><link>https://kkocdko.github.io/post/201804010101/</link><description>目前已知最好解决方案</description></item><item><title>使用VBA批量修改PPT字体样式</title><link>https://kkocdko.github.io/post/201803311928/</link><description>可能不支持MAC</description></item><item><title>New Post</title><link>https://kkocdko.github.io/post/201803300000/</link><description>The post excerpt</description></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?>
+      <rss version="2.0">
+        <channel>
+          <title>kkocdko's blog</title>
+          <link>https://kkocdko.github.io</link>
+          <description>kkocdko's blog</description>
+          
+          <item>
+            <title>EmEditor 精简版</title>
+            <description>移除不常用功能，修改默认设置</description>
+            <link>https://kkocdko.github.io/post/202106091858/</link>
+          </item>
+          
+          <item>
+            <title>Backup Data from VSCode Web</title>
+            <description>Export / import the user data</description>
+            <link>https://kkocdko.github.io/post/202104051518/</link>
+          </item>
+          
+          <item>
+            <title>博客停更至 2021 高考结束</title>
+            <description>为了更伟大的利益</description>
+            <link>https://kkocdko.github.io/post/202008070207/</link>
+          </item>
+          
+          <item>
+            <title>优雅地游玩 Minecraft</title>
+            <description>提升性能 + 便携化</description>
+            <link>https://kkocdko.github.io/post/202008020004/</link>
+          </item>
+          
+          <item>
+            <title>让程序以管理员权限运行的 PE 清单</title>
+            <description>备忘</description>
+            <link>https://kkocdko.github.io/post/202007200442/</link>
+          </item>
+          
+          <item>
+            <title>注销 ZEIT 账号之后遇到的坑</title>
+            <description>注销前需手动删除项目，否则域名将被永久占用</description>
+            <link>https://kkocdko.github.io/post/202004071057/</link>
+          </item>
+          
+          <item>
+            <title>本博客的协议已更改为 CC0</title>
+            <description>管那么多干啥</description>
+            <link>https://kkocdko.github.io/post/202003261111/</link>
+          </item>
+          
+          <item>
+            <title>mobp - 使 MSOffice 后台常驻</title>
+            <description>加快启动速度</description>
+            <link>https://kkocdko.github.io/post/202003020900/</link>
+          </item>
+          
+          <item>
+            <title>在安装 VS 生成工具时规避 .NET 安装错误</title>
+            <description>提示“未能安装包 Microsoft.Net.4.7.2.FullRedist...”</description>
+            <link>https://kkocdko.github.io/post/202002251309/</link>
+          </item>
+          
+          <item>
+            <title>各种格式的占位空文件</title>
+            <description>偶尔急用却找不到，太糟心了</description>
+            <link>https://kkocdko.github.io/post/202001252150/</link>
+          </item>
+          
+          <item>
+            <title>gitvars.bat for GitHub Desktop</title>
+            <description>Import GitHub Desktop's build-in Git client</description>
+            <link>https://kkocdko.github.io/post/201912292154/</link>
+          </item>
+          
+          <item>
+            <title>优雅地游玩 Flash 游戏</title>
+            <description>免网页广告，加载迅速，低资源占用</description>
+            <link>https://kkocdko.github.io/post/201912010248/</link>
+          </item>
+          
+          <item>
+            <title>WPS 2016 极限精简版</title>
+            <description>仅 27.8 MB，极轻量</description>
+            <link>https://kkocdko.github.io/post/201910051129/</link>
+          </item>
+          
+          <item>
+            <title>Convert Const to Let by Terser</title>
+            <description>Using TreeTransformer</description>
+            <link>https://kkocdko.github.io/post/201908110550/</link>
+          </item>
+          
+          <item>
+            <title>规避 Visual Studio 许可证过期的 Bug</title>
+            <description>许可证过期后，更新许可证会出错</description>
+            <link>https://kkocdko.github.io/post/201907081121/</link>
+          </item>
+          
+          <item>
+            <title>方便地使用 iPod</title>
+            <description>尽量脱离 Apple 生态链</description>
+            <link>https://kkocdko.github.io/post/201905030002/</link>
+          </item>
+          
+          <item>
+            <title>用 UserJS 注入 UserCSS</title>
+            <description>避免安装太多拓展</description>
+            <link>https://kkocdko.github.io/post/201904061741/</link>
+          </item>
+          
+          <item>
+            <title>注册表修改文件关联(默认程序)</title>
+            <description>在 NT6+ 上通用</description>
+            <link>https://kkocdko.github.io/post/201903290035/</link>
+          </item>
+          
+          <item>
+            <title>极限压缩文档扫描件</title>
+            <description>也适用其他颜色单调的图片</description>
+            <link>https://kkocdko.github.io/post/201902262339/</link>
+          </item>
+          
+          <item>
+            <title>周期精准的太阳系模型</title>
+            <description>看起来不错</description>
+            <link>https://kkocdko.github.io/post/201901292001/</link>
+          </item>
+          
+          <item>
+            <title>关闭屏幕的 WinAPI</title>
+            <description>与超时关屏效果相同</description>
+            <link>https://kkocdko.github.io/post/201901160028/</link>
+          </item>
+          
+          <item>
+            <title>重置 Windows 图标缓存</title>
+            <description>修复图标显示异常的问题</description>
+            <link>https://kkocdko.github.io/post/201811031827/</link>
+          </item>
+          
+          <item>
+            <title>PotPlayer 图标包：爱奇艺播放器</title>
+            <description>自制</description>
+            <link>https://kkocdko.github.io/post/201811031425/</link>
+          </item>
+          
+          <item>
+            <title>AIDA64 极限精简单文件版</title>
+            <description>蛮有用的硬件检测工具，仅 2.6MB</description>
+            <link>https://kkocdko.github.io/post/201810031930/</link>
+          </item>
+          
+          <item>
+            <title>几何画板单文件精简版</title>
+            <description>低调使用</description>
+            <link>https://kkocdko.github.io/post/201810011506/</link>
+          </item>
+          
+          <item>
+            <title>世界之窗浏览器单文件版</title>
+            <description>集成 Flash，应急使用</description>
+            <link>https://kkocdko.github.io/post/201809222137/</link>
+          </item>
+          
+          <item>
+            <title>在 MBR + Legacy 下用 Bootmgr 引导 Ubuntu</title>
+            <description>标题已经说得够清楚了</description>
+            <link>https://kkocdko.github.io/post/201808111117/</link>
+          </item>
+          
+          <item>
+            <title>简洁的 Markdown 编辑器页面</title>
+            <description>解析器为 marked.js</description>
+            <link>https://kkocdko.github.io/post/201807312330/</link>
+          </item>
+          
+          <item>
+            <title>修复 MSOffice 墨迹不可用问题</title>
+            <description>例如 PPT 放映白板，Word 墨迹公式</description>
+            <link>https://kkocdko.github.io/post/201807101054/</link>
+          </item>
+          
+          <item>
+            <title>使用 VBA 批量转换 Office 文档格式</title>
+            <description>例如，转换 doc 到 docx</description>
+            <link>https://kkocdko.github.io/post/201806261915/</link>
+          </item>
+          
+          <item>
+            <title>不便携的有道词典便携版</title>
+            <description>包含常用离线词典，去除非会员下载限制</description>
+            <link>https://kkocdko.github.io/post/201806061949/</link>
+          </item>
+          
+          <item>
+            <title>关于清华同方还原卡的一个坑</title>
+            <description>注册表的更改不会被还原，且不会储存到“进度”</description>
+            <link>https://kkocdko.github.io/post/201805111951/</link>
+          </item>
+          
+          <item>
+            <title>爱奇艺万能播放器调教指南</title>
+            <description>防自动更新、关闭启动动画、防止下载主题</description>
+            <link>https://kkocdko.github.io/post/201804202136/</link>
+          </item>
+          
+          <item>
+            <title>也许是最简洁的搜狗输入法皮肤</title>
+            <description>真正的极简</description>
+            <link>https://kkocdko.github.io/post/201804161401/</link>
+          </item>
+          
+          <item>
+            <title>用批处理弄个 U 盘复制器</title>
+            <description>使用Win下的Robocopy</description>
+            <link>https://kkocdko.github.io/post/201804130139/</link>
+          </item>
+          
+          <item>
+            <title>美化版 TRIXX</title>
+            <description>AMD显卡软超工具</description>
+            <link>https://kkocdko.github.io/post/201804110022/</link>
+          </item>
+          
+          <item>
+            <title>Windows 默认蓝色代码</title>
+            <description>随手记一下</description>
+            <link>https://kkocdko.github.io/post/201804110012/</link>
+          </item>
+          
+          <item>
+            <title>A4 大小的普通英文稿纸</title>
+            <description>自绘 英文稿纸</description>
+            <link>https://kkocdko.github.io/post/201804011233/</link>
+          </item>
+          
+          <item>
+            <title>在批处理中延时(等待)</title>
+            <description>一小段代码</description>
+            <link>https://kkocdko.github.io/post/201804010109/</link>
+          </item>
+          
+          <item>
+            <title>让批处理隐藏窗口运行</title>
+            <description>一小段代码</description>
+            <link>https://kkocdko.github.io/post/201804010105/</link>
+          </item>
+          
+          <item>
+            <title>让批处理以管理员权限运行</title>
+            <description>目前已知最好解决方案</description>
+            <link>https://kkocdko.github.io/post/201804010101/</link>
+          </item>
+          
+          <item>
+            <title>批量修改 PPT 字体样式</title>
+            <description>自动化，使用 VBA</description>
+            <link>https://kkocdko.github.io/post/201803311928/</link>
+          </item>
+          
+          <item>
+            <title>New Post</title>
+            <description>The post description</description>
+            <link>https://kkocdko.github.io/post/201803300000/</link>
+          </item>
+          
+        </channel>
+      </rss>

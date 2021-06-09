@@ -1,4 +1,4 @@
-<!DOCTYPE html><meta content="width=device-width" name=viewport><meta content="在NT6+上通用" name=description><link href=/bundle.css rel=stylesheet><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><script src=/bundle.js defer></script><script src=/check.js async></script><title>注册表修改文件关联(默认程序) - kkocdko's blog</title><main><article class=card><h1 id=注册表修改文件关联默认程序>注册表修改文件关联(默认程序)</h1><h3 id=introduction>Introduction</h3><p>由于各种原因（主要是安全方面考虑），Windows中修改文件关联的Api一改再改，改了又改。</p><p>而直接修改注册表+刷新Explorer的方法，也许是比较方便的能兼容各个Windows版本（NT6+）的方案（也许需要管理员权限）。</p><h3 id=code>Code</h3><pre><code>[-HKEY_CURRENT_USER\Software\Classes\{{AppName}}.{{Extension}}]
+<!DOCTYPE html><title>注册表修改文件关联(默认程序) - kkocdko's blog</title><meta name="description" content="在 NT6+ 上通用"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script><main><article><h1>注册表修改文件关联(默认程序)</h1><p>由于各种原因（主要是安全方面考虑），Windows 中修改文件关联的 Api 一改再改，改了又改。</p><p>而直接修改注册表 + 刷新 Explorer 的方法，也许是比较方便的能兼容各个 Windows 版本（NT6+）的方案（也许需要管理员权限）。</p><h3 id="code">Code</h3><pre><code>[-HKEY_CURRENT_USER\Software\Classes\{{AppName}}.{{Extension}}]
 
 [HKEY_CURRENT_USER\Software\Classes\{{AppName}}.{{Extension}}]
 
@@ -22,24 +22,19 @@
 &quot;{{AppName}}.{{Extension}}&quot;=hex(0):
 
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.{{Extension}}\UserChoice]
-&quot;Progid&quot;=&quot;{{AppName}}.{{Extension}}&quot;</code></pre><p>示例：用Nodejs生成注册表文件</p><pre><code class=language-javascript>let fs = require(&#39;fs&#39;);
-
-let templetStr = fs.readFileSync(`${__dirname}/templet.reg`).toString();
-let extensionArr = &#39;avi wmv wmp wm asf mpg mpeg mpe m1v m2v&#39;.split(&#39; &#39;);
-let appName = &#39;PotPlayerMini&#39;
-let appPath = &#39;C:\\\\Program Files\\\\PotPlayer\\\\PotPlayerMini.exe&#39; // Need 4 &#39;\\&#39;
-let outputText = &#39;&#39;;
-for (let extension of extensionArr) {
-    outputText += generateReg(appPath, appName, extension, appPath, &#39;0&#39;);
+&quot;Progid&quot;=&quot;{{AppName}}.{{Extension}}&quot;</code></pre><p>示例：用 NodeJs 生成注册表文件</p><pre><code class="language-javascript">const fs = require(&quot;fs&quot;);
+const template = fs.readFileSync(&quot;template.txt&quot;).toString();
+const exts = &quot;mp3 mp4 m4a avi mkv flv&quot;;
+const appName = &quot;PotPlayerMini&quot;;
+const appPath = &quot;D:\\\\PotPlayer\\\\PotPlayerMini.exe&quot;; // Need 4 &#39;\\&#39;
+const iconIndex = &quot;0&quot;;
+let output = &quot;&quot;;
+for (const ext of exts.split(&quot; &quot;)) {
+  output += template
+    .replaceAll(&quot;{{AppName}}&quot;, appName)
+    .replaceAll(&quot;{{AppPath}}&quot;, appPath)
+    .replaceAll(&quot;{{Extension}}&quot;, ext)
+    .replaceAll(&quot;{{IconFile}}&quot;, appPath)
+    .replaceAll(&quot;{{IconIndex}}&quot;, iconIndex);
 }
-fs.writeFileSync(`${__dirname}/output_${Date.now()}.reg`, outputText);
-
-function generateReg(appPath, appName, extension, iconFile, iconIndex) {
-    let outputStr = templetStr;
-    outputStr = outputStr.replace(/{{AppPath}}/g, appPath);
-    outputStr = outputStr.replace(/{{AppName}}/g, appName);
-    outputStr = outputStr.replace(/{{Extension}}/g, extension);
-    outputStr = outputStr.replace(/{{IconFile}}/g, iconFile);
-    outputStr = outputStr.replace(/{{IconIndex}}/g, iconIndex);
-    return outputStr;
-}</code></pre></article></main><header class=in></header>
+fs.writeFileSync(`output_${Date.now()}.reg`, output);</code></pre></article></main>

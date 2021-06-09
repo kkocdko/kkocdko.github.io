@@ -1,7 +1,5 @@
-<!DOCTYPE html><meta content="width=device-width" name=viewport><meta content="随手记一下。用于笔记本/一体机关屏" name=description><link href=/bundle.css rel=stylesheet><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.svg rel=icon><script src=/bundle.js defer></script><script src=/check.js async></script><title>关闭屏幕的WinAPI - kkocdko's blog</title><main><article class=card><h1 id=关闭屏幕的winapi>关闭屏幕的WinAPI</h1><h3 id=code>Code</h3><pre><code class=language-c>#include &lt;windows.h&gt;
-
-int main()
-{
+<!DOCTYPE html><title>关闭屏幕的 WinAPI - kkocdko's blog</title><meta name="description" content="与超时关屏效果相同"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script><main><article><h1>关闭屏幕的 WinAPI</h1><pre><code class="language-c">#include &lt;windows.h&gt;
+int main() {
     SendMessage(FindWindow(0, 0), WM_SYSCOMMAND, SC_MONITORPOWER, 2);
     return 0;
-}</code></pre><ul><li><p>就是这么简单。纯C，兼容XP~10，可在PE中使用。所以，为啥要去用那些带广告的，也许还需要VC-Library的关屏软件呢？</p></li><li><p>如果你实在懒得Build，那么我只能说——</p></li></ul><p><a href=https://pan.baidu.com/s/1WyT73ZVCK6FikQ3gH6ZL3g>https://pan.baidu.com/s/1WyT73ZVCK6FikQ3gH6ZL3g</a></p></article></main><header class=in></header>
+}</code></pre><ul><li><p>就是这么简单。纯 C，兼容 XP ~ 10，可在 PE 中使用。所以，为啥要去用那些带广告的，也许还需要 VCL 的关屏软件呢？</p></li><li><p>手头没编译器？试试：<a href="https://lanzoui.com/b0108ty8b">https://lanzoui.com/b0108ty8b</a></p></li></ul></article></main>
