@@ -6,6 +6,12 @@
           <description>kkocdko's blog</description>
           
           <item>
+            <title>crknob - Simple tool for chromium</title>
+            <description>Disable profile encryption</description>
+            <link>https://kkocdko.site/post/202107080428/</link>
+          </item>
+          
+          <item>
             <title>我如何将博客首页体积降至 3 KB</title>
             <description>百尺竿头，更进一步</description>
             <link>https://kkocdko.site/post/202106180833/</link>
@@ -157,7 +163,7 @@
           
           <item>
             <title>AIDA64 极限精简单文件版</title>
-            <description>蛮有用的硬件检测工具，仅 4.7 MB</description>
+            <description>方便的硬件检测工具，仅 2.6 MB</description>
             <link>https://kkocdko.site/post/201810031930/</link>
           </item>
           
