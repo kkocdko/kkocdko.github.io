@@ -1,4 +1,4 @@
-<!DOCTYPE html><title>关闭屏幕的 WinAPI - kkocdko's blog</title><meta name="description" content="与超时关屏效果相同"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script><main><article><h1>关闭屏幕的 WinAPI</h1><pre><code class="language-c">#include &lt;windows.h&gt;
+<!DOCTYPE html><head><title>关闭屏幕的 WinAPI - kkocdko's blog</title><meta name="description" content="与超时关屏效果相同"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script></head><main><article><h1>关闭屏幕的 WinAPI</h1><pre><code class="language-c">#include &lt;windows.h&gt;
 int main() {
     SendMessage(FindWindow(0, 0), WM_SYSCOMMAND, SC_MONITORPOWER, 2);
     return 0;

@@ -1,4 +1,4 @@
-<!DOCTYPE html><title>用批处理弄个 U 盘复制器 - kkocdko's blog</title><meta name="description" content="使用Win下的Robocopy"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script><main><article><h1>用批处理弄个 U 盘复制器</h1><pre><code class="language-batch">fltmc&gt;nul||mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~dpnx0&quot;,&quot;%*&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit
+<!DOCTYPE html><head><title>用批处理弄个 U 盘复制器 - kkocdko's blog</title><meta name="description" content="使用Win下的Robocopy"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script></head><main><article><h1>用批处理弄个 U 盘复制器</h1><pre><code class="language-batch">fltmc&gt;nul||mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~dpnx0&quot;,&quot;%*&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit
 
 set &quot;Destination=D:\k\CopiedFiles\&quot;
 set &quot;Extension=*&quot;

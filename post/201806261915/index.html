@@ -1,4 +1,4 @@
-<!DOCTYPE html><title>使用 VBA 批量转换 Office 文档格式 - kkocdko's blog</title><meta name="description" content="例如，转换 doc 到 docx"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script><main><article><h1>使用 VBA 批量转换 Office 文档格式</h1><pre><code class="language-vb">Sub FormatConverter()
+<!DOCTYPE html><head><title>使用 VBA 批量转换 Office 文档格式 - kkocdko's blog</title><meta name="description" content="例如，转换 doc 到 docx"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script></head><main><article><h1>使用 VBA 批量转换 Office 文档格式</h1><pre><code class="language-vb">Sub FormatConverter()
 Set instance = Documents &#39; 实例对象: Word=Documents | Excel=Workbooks | PowerPoint=Presentations
 Const fromExt = &quot;doc&quot; &#39; 原始格式扩展名
 Const toId = 12 &#39; 目标格式ID: doc=0 | docx=12 | xls=56 | xlsx=51 | ppt=1 | pptx=24
