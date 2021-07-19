@@ -1,4 +1,4 @@
-<!DOCTYPE html><head><title>用 UserJS 注入 UserCSS - kkocdko's blog</title><meta name="description" content="避免安装太多拓展"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script></head><main><article><h1>用 UserJS 注入 UserCSS</h1><p>通常，加载 UserCSS 需要 <a href="https://userstyles.org">Stylish</a> 这样的拓展。但我希望避免安装太多拓展，特别是在内存不宽裕的情况下。</p><p>使用 UserJS 注入 CSS 是个不错的选择。只需装一个脚本管理器，就能使用 UserJS + UserCSS，一个顶俩。</p><p>这里给出一个简洁的模板：</p><pre><code class="language-javascript">// ==UserScript==
+<!DOCTYPE html><title>用 UserJS 注入 UserCSS - kkocdko's blog</title><meta name="description" content="避免安装太多拓展"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script><main><article><h1>用 UserJS 注入 UserCSS</h1><p>通常，加载 UserCSS 需要 <a href="https://userstyles.org">Stylish</a> 这样的拓展。但我希望避免安装太多拓展，特别是在内存不宽裕的情况下。</p><p>使用 UserJS 注入 CSS 是个不错的选择。只需装一个脚本管理器，就能使用 UserJS + UserCSS，一个顶俩。</p><p>这里给出一个简洁的模板：</p><pre><code class="language-javascript">// ==UserScript==
 // @name        User CSS Example
 // @match       *://example.com/*
 // @run-at      document-start

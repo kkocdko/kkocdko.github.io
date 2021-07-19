@@ -1,4 +1,4 @@
-<!DOCTYPE html><head><title>重置 Windows 图标缓存 - kkocdko's blog</title><meta name="description" content="修复图标显示异常的问题"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script></head><main><article><h1>重置 Windows 图标缓存</h1><pre><code class="language-batch">fltmc&gt;nul||cd/d %~dp0&amp;&amp;mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~nx0&quot;,&quot;%1&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit
+<!DOCTYPE html><title>重置 Windows 图标缓存 - kkocdko's blog</title><meta name="description" content="修复图标显示异常的问题"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script><main><article><h1>重置 Windows 图标缓存</h1><pre><code class="language-batch">fltmc&gt;nul||cd/d %~dp0&amp;&amp;mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~nx0&quot;,&quot;%1&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit
 taskkill /f /im explorer.exe
 rd /s /q %userprofile%\AppData\Local\Microsoft\Windows\Explorer
 start &quot;&quot; explorer.exe</code></pre></article></main>

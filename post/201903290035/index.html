@@ -1,4 +1,4 @@
-<!DOCTYPE html><head><title>注册表修改文件关联(默认程序) - kkocdko's blog</title><meta name="description" content="在 NT6+ 上通用"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script></head><main><article><h1>注册表修改文件关联(默认程序)</h1><p>由于各种原因（主要是安全方面考虑），Windows 中修改文件关联的 Api 一改再改，改了又改。</p><p>而直接修改注册表 + 刷新 Explorer 的方法，也许是比较方便的能兼容各个 Windows 版本（NT6+）的方案（也许需要管理员权限）。</p><h3 id="code">Code</h3><pre><code>[-HKEY_CURRENT_USER\Software\Classes\{{AppName}}.{{Extension}}]
+<!DOCTYPE html><title>注册表修改文件关联(默认程序) - kkocdko's blog</title><meta name="description" content="在 NT6+ 上通用"><script src="/bundle.js" onload="[].flat||(location='/update.html')"></script><main><article><h1>注册表修改文件关联(默认程序)</h1><p>由于各种原因（主要是安全方面考虑），Windows 中修改文件关联的 Api 一改再改，改了又改。</p><p>而直接修改注册表 + 刷新 Explorer 的方法，也许是比较方便的能兼容各个 Windows 版本（NT6+）的方案（也许需要管理员权限）。</p><h3 id="code">Code</h3><pre><code>[-HKEY_CURRENT_USER\Software\Classes\{{AppName}}.{{Extension}}]
 
 [HKEY_CURRENT_USER\Software\Classes\{{AppName}}.{{Extension}}]
 
